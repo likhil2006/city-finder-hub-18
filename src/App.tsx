@@ -17,31 +17,33 @@ import Header from "./components/layout/Header";
 
 const queryClient = new QueryClient();
 
-const App = () => (
-  <QueryClientProvider client={queryClient}>
-    <TooltipProvider>
-      <Toaster />
-      <Sonner />
-      <BrowserRouter>
-        <Header />
-        <main className="min-h-screen">
-          <Routes>
-            <Route path="/" element={<HomePage />} />
-            <Route path="/map" element={<CityMapPage />} />
-            <Route path="/services" element={<ServicesPage />} />
-            <Route path="/tourist-guide" element={<TouristGuidePage />} />
-            <Route path="/transport-guide" element={<TransportGuidePage />} />
-            <Route path="/report" element={<ReportIssuePage />} />
-            <Route path="/government" element={<GovernmentServicesPage />} />
-            <Route path="/events" element={<EventsPage />} />
-            <Route path="/news" element={<NewsPage />} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-      </BrowserRouter>
-    </TooltipProvider>
-  </QueryClientProvider>
-);
+const App = () => {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <TooltipProvider>
+        <Toaster />
+        <Sonner />
+        <BrowserRouter>
+          <Header />
+          <main className="min-h-screen">
+            <Routes>
+              <Route path="/" element={<HomePage />} />
+              <Route path="/map" element={<CityMapPage />} />
+              <Route path="/services" element={<ServicesPage />} />
+              <Route path="/tourist-guide" element={<TouristGuidePage />} />
+              <Route path="/transport-guide" element={<TransportGuidePage />} />
+              <Route path="/report" element={<ReportIssuePage />} />
+              <Route path="/government" element={<GovernmentServicesPage />} />
+              <Route path="/events" element={<EventsPage />} />
+              <Route path="/news" element={<NewsPage />} />
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </main>
+        </BrowserRouter>
+      </TooltipProvider>
+    </QueryClientProvider>
+  );
+};
 
 export default App;
