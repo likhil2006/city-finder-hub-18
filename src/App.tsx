@@ -6,6 +6,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import HomePage from "./pages/HomePage";
 import CityMapPage from "./pages/CityMapPage";
 import ServicesPage from "./pages/ServicesPage";
+import TouristGuidePage from "./pages/TouristGuidePage";
+import TransportGuidePage from "./pages/TransportGuidePage";
 import ReportIssuePage from "./pages/ReportIssuePage";
 import GovernmentServicesPage from "./pages/GovernmentServicesPage";
 import EventsPage from "./pages/EventsPage";
@@ -27,6 +29,8 @@ const App = () => (
             <Route path="/" element={<HomePage />} />
             <Route path="/map" element={<CityMapPage />} />
             <Route path="/services" element={<ServicesPage />} />
+            <Route path="/tourist-guide" element={<TouristGuidePage />} />
+            <Route path="/transport-guide" element={<TransportGuidePage />} />
             <Route path="/report" element={<ReportIssuePage />} />
             <Route path="/government" element={<GovernmentServicesPage />} />
             <Route path="/events" element={<EventsPage />} />

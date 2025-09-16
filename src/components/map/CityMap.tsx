@@ -69,7 +69,7 @@ interface CityMapProps {
 const CityMap: React.FC<CityMapProps> = ({ tomtomApiKey }) => {
   const mapContainer = useRef<HTMLDivElement>(null);
   const map = useRef<tt.Map | null>(null);
-  const [apiKey, setApiKey] = useState(tomtomApiKey || '');
+  const [apiKey, setApiKey] = useState(tomtomApiKey || '3IqeQp9jzT85x4sXKm9UPACTYTU1Cv2w');
 
   // Sample data for Hyderabad city services
   const cityServices = [

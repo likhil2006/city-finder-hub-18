@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu, MapPin, Users, MessageSquare, Newspaper, Globe, Building2, Calendar } from "lucide-react";
+import { Menu, MapPin, Users, MessageSquare, Newspaper, Globe, Building2, Calendar, Camera, Bus } from "lucide-react";
 import urbanFlowLogo from "@/assets/urban-flow-logo.jpg";
 
 const Header = () => {
@@ -13,6 +13,8 @@ const Header = () => {
     { name: "Home", href: "/", icon: MapPin },
     { name: "City Map", href: "/map", icon: MapPin },
     { name: "Services", href: "/services", icon: Users },
+    { name: "Tourist Guide", href: "/tourist-guide", icon: Camera },
+    { name: "Transport Guide", href: "/transport-guide", icon: Bus },
     { name: "Report Issue", href: "/report", icon: MessageSquare },
     { name: "Government", href: "/government", icon: Building2 },
     { name: "Events", href: "/events", icon: Calendar },
